@@ -6,7 +6,7 @@
 
         // DOM ready, take it away
         window.onscroll = function() {
-            myFunction()
+            myFunction();
         };
 
         var header = document.getElementById("myHeader");
@@ -18,7 +18,7 @@
             } else {
                 header.classList.remove("sticky");
             }
-        };
+        }
 
     });
 

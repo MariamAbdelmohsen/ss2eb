@@ -4201,6 +4201,21 @@ html {
   height: 100%;
 }
 
+/*------------------------------------* *	TYPOGRAPHY
+ *\*------------------------------------ */
+@font-face {
+  font-family: 'Font-Name';
+  src: url("fonts/font-name.eot");
+  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"), url("fonts/font-name.woff") format("woff"), url("fonts/font-name.ttf") format("truetype"), url("fonts/font-name.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
 /* clear*/
 .clear:before {
   content: ' ';
@@ -4257,7 +4272,7 @@ header {
   width: 100%;
   overflow: hidden;
   height: 115px;
-  padding: 15px 50px;
+  padding: 15px 20px;
   z-index: 1;
 }
 
@@ -4277,13 +4292,70 @@ header {
 /* logo*/
 .logo {
   float: left;
-  width: 260px;
+  width: 200px;
   overflow: hidden;
   max-height: 70px;
 }
 
 .logo img {
-  width: 60%;
+  width: 70%;
+}
+
+/* nav*/
+.nav {
+  font-family: 'Lora', serif;
+  float: right;
+  width: 45%;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 9px auto;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  .nav {
+    width: 63%;
+  }
+}
+
+.nav ul#main li {
+  list-style-type: none;
+  float: left;
+  width: 20%;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+}
+
+.nav ul#main li:nth-child(3) {
+  padding-right: 26px;
+}
+
+.nav ul#main li:hover .sub-menu {
+  display: block;
+  text-align: left;
+}
+
+.nav ul#main li:hover .sub-menu li {
+  text-align: left;
+  float: none;
+  width: 50%;
+  padding: 2px 0;
+}
+
+.nav ul#main li:nth-child(4) {
+  width: 22%;
+}
+
+.nav ul#main li:nth-child(5) {
+  width: 18%;
+}
+
+.nav ul#main li ul.sub-menu {
+  display: none;
+}
+
+.nav ul#main li a {
+  color: #b53d3d;
 }
 
 /* wrapper*/
@@ -4324,9 +4396,15 @@ body .wrapper {
 
 @media screen and (max-width: 39.99em) {
   body .wrapper {
-    width: 100%;
-    margin: 0;
+    width: 95%;
+    margin: 0 auto;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  body .wrapper {
+    width: 90%;
   }
 }
 
@@ -4339,6 +4417,19 @@ body .wrapper section {
   width: 70%;
 }
 
+@media screen and (max-width: 39.99em) {
+  body .wrapper section {
+    float: none;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  body .wrapper section {
+    width: 50%;
+  }
+}
+
 body .wrapper .how2 {
   font-size: 1em;
 }
@@ -4349,10 +4440,38 @@ body aside {
   margin: 30px auto;
 }
 
+@media screen and (max-width: 39.99em) {
+  body aside {
+    float: none;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  body aside {
+    width: 43%;
+  }
+}
+
 body aside img {
-  width: 30%;
+  width: 55%;
   float: right;
-  margin-left: 30px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 39.99em) {
+  body aside img {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  body aside img {
+    float: none;
+    width: auto;
+  }
 }
 
 section {
@@ -4360,10 +4479,36 @@ section {
   margin: 20px auto;
 }
 
+@media screen and (max-width: 39.99em) {
+  section {
+    float: none;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  section {
+    width: 95%;
+  }
+}
+
 section article {
   width: 80%;
   padding-left: 20px;
   float: left;
+}
+
+@media screen and (max-width: 39.99em) {
+  section article {
+    float: none;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  section article {
+    width: 90%;
+  }
 }
 
 section aside {
@@ -4561,125 +4706,21 @@ li {
   margin: 10px 20px;
 }
 
-/* nav*/
-.nav {
-  font-family: 'Lora', serif;
-  float: right;
-  width: 45%;
-  font-size: 1em;
-  font-weight: bold;
-  margin: 9px auto;
+@media screen and (max-width: 39.99em) {
+  #container-3 {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.99em) {
-  .nav {
-    width: 63%;
+  #container-3 {
+    width: 49%;
   }
-}
-
-.nav ul#main li {
-  list-style-type: none;
-  float: left;
-  width: 16.66667%;
-  text-align: right;
-  height: 30px;
-  line-height: 30px;
-}
-
-.nav ul#main li:nth-child(3) {
-  padding-right: 26px;
-}
-
-.nav ul#main li:hover .sub-menu {
-  display: block;
-  text-align: left;
-  margin-left: 25px;
-}
-
-.nav ul#main li:hover .sub-menu li {
-  text-align: left;
-  float: none;
-  width: 50%;
-  padding: 2px 0;
-}
-
-.nav ul#main li ul.sub-menu {
-  display: none;
-}
-
-.nav ul#main li a {
-  color: #b53d3d;
 }
 
 /* sidebar*/
-/* footer*/
-footer {
-  padding-top: 25px;
-  margin: 50px auto;
-  width: 85%;
-}
-
-@media screen and (max-width: 39.99em) {
-  footer {
-    width: 100%;
-    display: block;
-    padding: 1em;
-  }
-}
-
-#footer {
-  margin: 0 auto;
-  width: 100%;
-  clear: both;
-}
-
-#footer h2 {
-  margin: 0 auto;
-}
-
-#footer .services li {
-  width: 27%;
-  float: left;
-  list-style: none;
-  padding: 1.5%;
-  text-align: center;
-}
-
-@media screen and (max-width: 39.99em) {
-  #footer .services li {
-    float: none;
-    width: 100%;
-  }
-}
-
-.footersocial {
-  float: right;
-}
-
-@media screen and (max-width: 39.99em) {
-  .footersocial {
-    float: none;
-    margin: 0 auto;
-    padding-bottom: 5em;
-  }
-}
-
-#copyright {
-  line-height: 50px;
-  clear: both;
-  margin-top: 20px;
-  text-align: center;
-}
-
-#copyright a {
-  color: #ffcc00;
-}
-
-#copyright a:hover {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
 /*------------------------------------* *	PAGES
  *\*------------------------------------ */
 .page-id-7 #wrapper {
@@ -4744,6 +4785,7 @@ footer {
 
 .subSteps {
   margin: 20px auto;
+  text-align: center;
 }
 
 .subSteps li {
@@ -4752,22 +4794,27 @@ footer {
   margin-right: 25px;
 }
 
+@media screen and (max-width: 39.99em) {
+  .subSteps li {
+    float: none;
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  .subSteps li {
+    width: 40%;
+  }
+}
+
 .subSteps li img {
   width: auto;
 }
 
 /*------------------------------------* *    IMAGES
  *\*------------------------------------ */
-/*------------------------------------* *	TYPOGRAPHY
- *\*------------------------------------ */
-@font-face {
-  font-family: 'Font-Name';
-  src: url("fonts/font-name.eot");
-  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"), url("fonts/font-name.woff") format("woff"), url("fonts/font-name.ttf") format("truetype"), url("fonts/font-name.svg#font-name") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /*------------------------------------* *    WORDPRESS CORE
  *\*------------------------------------ */
 .alignnone {
@@ -4846,6 +4893,95 @@ a img.aligncenter {
   line-height: 17px;
   margin: 0;
   padding: 0 4px 5px;
+}
+
+/* footer*/
+footer {
+  padding-top: 25px;
+  margin: 50px auto;
+  width: 85%;
+  max-width: 1180px;
+}
+
+@media screen and (max-width: 39.99em) {
+  footer {
+    width: auto;
+    display: block;
+    padding: 1em;
+  }
+}
+
+#footer {
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+}
+
+#footer h2 {
+  margin: 0 auto;
+}
+
+#footer .services {
+  max-width: 960px;
+  padding-top: 15px;
+}
+
+#footer .services li {
+  width: 25%;
+  float: left;
+  list-style: none;
+  padding: 1.5%;
+  text-align: center;
+}
+
+@media screen and (max-width: 39.99em) {
+  #footer .services li {
+    float: none;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  #footer .services li {
+    width: 33%;
+  }
+}
+
+.footersocial {
+  float: right;
+}
+
+@media screen and (max-width: 39.99em) {
+  .footersocial {
+    float: none;
+    margin: 0 auto;
+    padding-bottom: 5em;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  .footersocial {
+    float: none;
+    clear: both;
+    max-width: 100px;
+    margin: 40px auto;
+  }
+}
+
+#copyright {
+  line-height: 50px;
+  clear: both;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#copyright a {
+  color: #ffcc00;
+}
+
+#copyright a:hover {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /*------------------------------------* *    PRINT
